@@ -24,11 +24,7 @@
 		8CD6CA492165E520000162EA /* cat.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CD6CA482165E520000162EA /* cat.png */; };
 		8CF864A52163019000A0FC7A /* TigerIdle1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CF864A42163019000A0FC7A /* TigerIdle1.png */; };
 		8CF864AE21633A1B00A0FC7A /* catDead.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8CF864A621633A1A00A0FC7A /* catDead.atlas */; };
-		8CF864AF21633A1B00A0FC7A /* humanAttack.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8CF864A721633A1A00A0FC7A /* humanAttack.atlas */; };
 		8CF864B121633A1B00A0FC7A /* catAttack.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8CF864A921633A1B00A0FC7A /* catAttack.atlas */; };
-		8CF864B221633A1B00A0FC7A /* humanDead.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8CF864AA21633A1B00A0FC7A /* humanDead.atlas */; };
-		8CF864B421633A1B00A0FC7A /* humanIdle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8CF864AC21633A1B00A0FC7A /* humanIdle.atlas */; };
-		8CF864B8216358EB00A0FC7A /* humanMove.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8CF864B7216358EB00A0FC7A /* humanMove.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,11 +48,7 @@
 		8CD6CA482165E520000162EA /* cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat.png; sourceTree = "<group>"; };
 		8CF864A42163019000A0FC7A /* TigerIdle1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TigerIdle1.png; sourceTree = "<group>"; };
 		8CF864A621633A1A00A0FC7A /* catDead.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = catDead.atlas; sourceTree = "<group>"; };
-		8CF864A721633A1A00A0FC7A /* humanAttack.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = humanAttack.atlas; sourceTree = "<group>"; };
 		8CF864A921633A1B00A0FC7A /* catAttack.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = catAttack.atlas; sourceTree = "<group>"; };
-		8CF864AA21633A1B00A0FC7A /* humanDead.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = humanDead.atlas; sourceTree = "<group>"; };
-		8CF864AC21633A1B00A0FC7A /* humanIdle.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = humanIdle.atlas; sourceTree = "<group>"; };
-		8CF864B7216358EB00A0FC7A /* humanMove.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = humanMove.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,10 +141,6 @@
 				8CD6CA432165E4E5000162EA /* catMove.atlas */,
 				8CF864A921633A1B00A0FC7A /* catAttack.atlas */,
 				8CF864A621633A1A00A0FC7A /* catDead.atlas */,
-				8CF864B7216358EB00A0FC7A /* humanMove.atlas */,
-				8CF864A721633A1A00A0FC7A /* humanAttack.atlas */,
-				8CF864AA21633A1B00A0FC7A /* humanDead.atlas */,
-				8CF864AC21633A1B00A0FC7A /* humanIdle.atlas */,
 			);
 			path = KonGaRuCapstone;
 			sourceTree = "<group>";
@@ -225,14 +213,10 @@
 				8CD6CA492165E520000162EA /* cat.png in Resources */,
 				8CF864B121633A1B00A0FC7A /* catAttack.atlas in Resources */,
 				8CD0ABB92152AA48003DA876 /* Actions.sks in Resources */,
-				8CF864B221633A1B00A0FC7A /* humanDead.atlas in Resources */,
 				8CD6CA462165E4E6000162EA /* catMove.atlas in Resources */,
-				8CF864B8216358EB00A0FC7A /* humanMove.atlas in Resources */,
 				8CF864AE21633A1B00A0FC7A /* catDead.atlas in Resources */,
 				8CD6CA452165E4E6000162EA /* catJump.atlas in Resources */,
 				8CF864A52163019000A0FC7A /* TigerIdle1.png in Resources */,
-				8CF864AF21633A1B00A0FC7A /* humanAttack.atlas in Resources */,
-				8CF864B421633A1B00A0FC7A /* humanIdle.atlas in Resources */,
 				8CD0ABC22152AA49003DA876 /* Main.storyboard in Resources */,
 				8CD6CA472165E4E6000162EA /* catIdle.atlas in Resources */,
 			);
