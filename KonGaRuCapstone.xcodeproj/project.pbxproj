@@ -10,7 +10,6 @@
 		8C1C72EB215A5E68007661A3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1C72EA215A5E68007661A3 /* MainView.swift */; };
 		8C23B16121537900002C5F48 /* Ground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C23B16021537900002C5F48 /* Ground.swift */; };
 		8C23B16321537B19002C5F48 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C23B16221537B19002C5F48 /* Player.swift */; };
-		8C23B16521538642002C5F48 /* BearRun1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C23B16421538642002C5F48 /* BearRun1.png */; };
 		8CD0ABB52152AA48003DA876 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD0ABB42152AA48003DA876 /* AppDelegate.swift */; };
 		8CD0ABB72152AA48003DA876 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8CD0ABB62152AA48003DA876 /* GameScene.sks */; };
 		8CD0ABB92152AA48003DA876 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8CD0ABB82152AA48003DA876 /* Actions.sks */; };
@@ -19,13 +18,15 @@
 		8CD0ABBF2152AA49003DA876 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CD0ABBE2152AA49003DA876 /* Assets.xcassets */; };
 		8CD0ABC22152AA49003DA876 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CD0ABC02152AA49003DA876 /* Main.storyboard */; };
 		8CD0ABCB2152AA59003DA876 /* ControllerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD0ABCA2152AA59003DA876 /* ControllerService.swift */; };
+		8CD6CA452165E4E6000162EA /* catJump.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8CD6CA422165E4E5000162EA /* catJump.atlas */; };
+		8CD6CA462165E4E6000162EA /* catMove.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8CD6CA432165E4E5000162EA /* catMove.atlas */; };
+		8CD6CA472165E4E6000162EA /* catIdle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8CD6CA442165E4E6000162EA /* catIdle.atlas */; };
+		8CD6CA492165E520000162EA /* cat.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CD6CA482165E520000162EA /* cat.png */; };
 		8CF864A52163019000A0FC7A /* TigerIdle1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CF864A42163019000A0FC7A /* TigerIdle1.png */; };
 		8CF864AE21633A1B00A0FC7A /* catDead.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8CF864A621633A1A00A0FC7A /* catDead.atlas */; };
 		8CF864AF21633A1B00A0FC7A /* humanAttack.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8CF864A721633A1A00A0FC7A /* humanAttack.atlas */; };
-		8CF864B021633A1B00A0FC7A /* catIdle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8CF864A821633A1A00A0FC7A /* catIdle.atlas */; };
 		8CF864B121633A1B00A0FC7A /* catAttack.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8CF864A921633A1B00A0FC7A /* catAttack.atlas */; };
 		8CF864B221633A1B00A0FC7A /* humanDead.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8CF864AA21633A1B00A0FC7A /* humanDead.atlas */; };
-		8CF864B321633A1B00A0FC7A /* catMove.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8CF864AB21633A1B00A0FC7A /* catMove.atlas */; };
 		8CF864B421633A1B00A0FC7A /* humanIdle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8CF864AC21633A1B00A0FC7A /* humanIdle.atlas */; };
 		8CF864B8216358EB00A0FC7A /* humanMove.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8CF864B7216358EB00A0FC7A /* humanMove.atlas */; };
 /* End PBXBuildFile section */
@@ -34,7 +35,6 @@
 		8C1C72EA215A5E68007661A3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		8C23B16021537900002C5F48 /* Ground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ground.swift; sourceTree = "<group>"; };
 		8C23B16221537B19002C5F48 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		8C23B16421538642002C5F48 /* BearRun1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BearRun1.png; sourceTree = "<group>"; };
 		8CD0ABB12152AA48003DA876 /* KonGaRuCapstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KonGaRuCapstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CD0ABB42152AA48003DA876 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CD0ABB62152AA48003DA876 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -46,13 +46,15 @@
 		8CD0ABC32152AA49003DA876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CD0ABC42152AA49003DA876 /* KonGaRuCapstone.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KonGaRuCapstone.entitlements; sourceTree = "<group>"; };
 		8CD0ABCA2152AA59003DA876 /* ControllerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerService.swift; sourceTree = "<group>"; };
+		8CD6CA422165E4E5000162EA /* catJump.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = catJump.atlas; sourceTree = "<group>"; };
+		8CD6CA432165E4E5000162EA /* catMove.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = catMove.atlas; sourceTree = "<group>"; };
+		8CD6CA442165E4E6000162EA /* catIdle.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = catIdle.atlas; sourceTree = "<group>"; };
+		8CD6CA482165E520000162EA /* cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat.png; sourceTree = "<group>"; };
 		8CF864A42163019000A0FC7A /* TigerIdle1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TigerIdle1.png; sourceTree = "<group>"; };
 		8CF864A621633A1A00A0FC7A /* catDead.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = catDead.atlas; sourceTree = "<group>"; };
 		8CF864A721633A1A00A0FC7A /* humanAttack.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = humanAttack.atlas; sourceTree = "<group>"; };
-		8CF864A821633A1A00A0FC7A /* catIdle.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = catIdle.atlas; sourceTree = "<group>"; };
 		8CF864A921633A1B00A0FC7A /* catAttack.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = catAttack.atlas; sourceTree = "<group>"; };
 		8CF864AA21633A1B00A0FC7A /* humanDead.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = humanDead.atlas; sourceTree = "<group>"; };
-		8CF864AB21633A1B00A0FC7A /* catMove.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = catMove.atlas; sourceTree = "<group>"; };
 		8CF864AC21633A1B00A0FC7A /* humanIdle.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = humanIdle.atlas; sourceTree = "<group>"; };
 		8CF864B7216358EB00A0FC7A /* humanMove.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = humanMove.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,18 +140,19 @@
 				8C1C72EC215A5EEE007661A3 /* Class */,
 				8CD0ABB42152AA48003DA876 /* AppDelegate.swift */,
 				8CD0ABBE2152AA49003DA876 /* Assets.xcassets */,
-				8C23B16421538642002C5F48 /* BearRun1.png */,
 				8CF864A42163019000A0FC7A /* TigerIdle1.png */,
 				8CD0ABC32152AA49003DA876 /* Info.plist */,
 				8CD0ABC42152AA49003DA876 /* KonGaRuCapstone.entitlements */,
+				8CD6CA482165E520000162EA /* cat.png */,
+				8CD6CA442165E4E6000162EA /* catIdle.atlas */,
+				8CD6CA422165E4E5000162EA /* catJump.atlas */,
+				8CD6CA432165E4E5000162EA /* catMove.atlas */,
+				8CF864A921633A1B00A0FC7A /* catAttack.atlas */,
+				8CF864A621633A1A00A0FC7A /* catDead.atlas */,
 				8CF864B7216358EB00A0FC7A /* humanMove.atlas */,
 				8CF864A721633A1A00A0FC7A /* humanAttack.atlas */,
 				8CF864AA21633A1B00A0FC7A /* humanDead.atlas */,
 				8CF864AC21633A1B00A0FC7A /* humanIdle.atlas */,
-				8CF864A921633A1B00A0FC7A /* catAttack.atlas */,
-				8CF864A621633A1A00A0FC7A /* catDead.atlas */,
-				8CF864A821633A1A00A0FC7A /* catIdle.atlas */,
-				8CF864AB21633A1B00A0FC7A /* catMove.atlas */,
 			);
 			path = KonGaRuCapstone;
 			sourceTree = "<group>";
@@ -219,18 +222,19 @@
 			files = (
 				8CD0ABB72152AA48003DA876 /* GameScene.sks in Resources */,
 				8CD0ABBF2152AA49003DA876 /* Assets.xcassets in Resources */,
+				8CD6CA492165E520000162EA /* cat.png in Resources */,
 				8CF864B121633A1B00A0FC7A /* catAttack.atlas in Resources */,
-				8CF864B321633A1B00A0FC7A /* catMove.atlas in Resources */,
 				8CD0ABB92152AA48003DA876 /* Actions.sks in Resources */,
 				8CF864B221633A1B00A0FC7A /* humanDead.atlas in Resources */,
+				8CD6CA462165E4E6000162EA /* catMove.atlas in Resources */,
 				8CF864B8216358EB00A0FC7A /* humanMove.atlas in Resources */,
 				8CF864AE21633A1B00A0FC7A /* catDead.atlas in Resources */,
+				8CD6CA452165E4E6000162EA /* catJump.atlas in Resources */,
 				8CF864A52163019000A0FC7A /* TigerIdle1.png in Resources */,
 				8CF864AF21633A1B00A0FC7A /* humanAttack.atlas in Resources */,
-				8C23B16521538642002C5F48 /* BearRun1.png in Resources */,
 				8CF864B421633A1B00A0FC7A /* humanIdle.atlas in Resources */,
 				8CD0ABC22152AA49003DA876 /* Main.storyboard in Resources */,
-				8CF864B021633A1B00A0FC7A /* catIdle.atlas in Resources */,
+				8CD6CA472165E4E6000162EA /* catIdle.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

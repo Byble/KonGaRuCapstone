@@ -66,10 +66,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         physicsWorld.gravity = CGVector(dx: 0, dy: -15)
         
-/* for test
-        let skView = self.view as! SKView
-        skView.showsPhysics
-*/
+
+//        let skView = self.view
+//        skView!.showsPhysics =  true
+
     }
     
     override func didMove(to view: SKView) {
@@ -77,11 +77,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func update(_ currentTime: TimeInterval) {
-        player.move()
         followCam()
-    }
-    
-    override func touchesBegan(with event: NSEvent) {
+        
+        player.checkMoveAnim()
+        player.moveUpdate()
+        player.actionUpdate()
         
     }
     
@@ -92,10 +92,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func didBegin(_ contact: SKPhysicsContact) {
         if contact.bodyA.categoryBitMask == ColliderType.floor.rawValue || contact.bodyB.categoryBitMask == ColliderType.floor.rawValue {
-            
             if contact.bodyA.categoryBitMask == ColliderType.charactor.rawValue || contact.bodyB.categoryBitMask == ColliderType.charactor.rawValue {
                 player.action.onGround = true
-                return
             }
         }
     }

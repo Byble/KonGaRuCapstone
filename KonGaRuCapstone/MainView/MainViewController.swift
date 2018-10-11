@@ -19,7 +19,7 @@ class MainViewController: NSViewController {
     let controllService = ControllerService()
     
     override func viewWillAppear() {
-        enterFullScreen()
+//        enterFullScreen()
     }
     
     override func viewDidLoad() {
@@ -37,6 +37,11 @@ class MainViewController: NSViewController {
             view.ignoresSiblingOrder = true
         }
     }
+    
+    @IBAction func exitBtn(_ sender: Any) {
+        NSApplication.shared.terminate(self)
+    }
+    
     
     func enterFullScreen(){
         let presOptions: NSApplication.PresentationOptions = [.fullScreen, .autoHideMenuBar]
@@ -65,9 +70,21 @@ class MainViewController: NSViewController {
         if let game = skView.scene as? GameScene{
             switch act{
             case "Jp":
-                game.player.action.jump = true
-            case "A":
-                game.player.action.attack = true
+//                game.player.action.jump = true
+                game.player.jump()
+            case "A1":
+                if game.player.action.attack1 == false
+                {
+                    game.player.action.attack1 = true
+                }
+            case "A2":
+                if game.player.action.attack2 == false{
+                    game.player.action.attack2 = true
+                }
+            case "A3":
+                if game.player.action.attack3 == false{
+                    game.player.action.attack3 = true
+                }
             case "D":
                 game.player.action.dash = true
             case "T":
@@ -100,8 +117,12 @@ extension MainViewController : ControllerServiceDelegate {
                 self.move(direction: "RUp")
             case "Jp":
                 self.action(act: "Jp")
-            case "A":
-                self.action(act: "A")
+            case "A1":
+                self.action(act: "A1")
+            case "A2":
+                self.action(act: "A2")
+            case "A3":
+                self.action(act: "A3")
             case "D":
                 self.action(act: "D")
             case "T":
