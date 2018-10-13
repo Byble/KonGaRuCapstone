@@ -105,7 +105,6 @@ class Player: SKSpriteNode {
     func checkIdle() -> Bool{
         if !(moveMent.leftMove) && !(moveMent.rightMove) && (action.onGround) && !(action.dash) && !(action.attack1) && !(action.attack2) && !(action.attack3) && !(action.skill1) && !(action.transform) && !(action.idle){
             if animCheck.transforming == false{
-                
                 action.idle = true
                 action.attack1 = false
                 action.attack2 = false
