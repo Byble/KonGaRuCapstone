@@ -65,11 +65,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         camera?.run(zoomInAction)
         
         physicsWorld.gravity = CGVector(dx: 0, dy: -15)
-        
 
 //        let skView = self.view
 //        skView!.showsPhysics =  true
-
     }
     
     override func didMove(to view: SKView) {
@@ -82,7 +80,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         player.checkMoveAnim()
         player.moveUpdate()
         player.actionUpdate()
-        
     }
     
     func followCam(){
@@ -93,7 +90,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func didBegin(_ contact: SKPhysicsContact) {
         if contact.bodyA.categoryBitMask == ColliderType.floor.rawValue || contact.bodyB.categoryBitMask == ColliderType.floor.rawValue {
             if contact.bodyA.categoryBitMask == ColliderType.charactor.rawValue || contact.bodyB.categoryBitMask == ColliderType.charactor.rawValue {
-                player.action.onGround = true
+                player.setActionOnGround(isOn: true)
             }
         }
     }

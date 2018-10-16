@@ -10,6 +10,7 @@
 		8C1C72EB215A5E68007661A3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1C72EA215A5E68007661A3 /* MainView.swift */; };
 		8C23B16121537900002C5F48 /* Ground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C23B16021537900002C5F48 /* Ground.swift */; };
 		8C23B16321537B19002C5F48 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C23B16221537B19002C5F48 /* Player.swift */; };
+		8C7DB1BC2174A1C100BBBA69 /* catRun.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8C7DB1BB2174A1C100BBBA69 /* catRun.atlas */; };
 		8CD0ABB52152AA48003DA876 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD0ABB42152AA48003DA876 /* AppDelegate.swift */; };
 		8CD0ABB72152AA48003DA876 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8CD0ABB62152AA48003DA876 /* GameScene.sks */; };
 		8CD0ABB92152AA48003DA876 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8CD0ABB82152AA48003DA876 /* Actions.sks */; };
@@ -30,6 +31,7 @@
 		8C1C72EA215A5E68007661A3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		8C23B16021537900002C5F48 /* Ground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ground.swift; sourceTree = "<group>"; };
 		8C23B16221537B19002C5F48 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		8C7DB1BB2174A1C100BBBA69 /* catRun.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = catRun.atlas; sourceTree = "<group>"; };
 		8CD0ABB12152AA48003DA876 /* KonGaRuCapstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KonGaRuCapstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CD0ABB42152AA48003DA876 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CD0ABB62152AA48003DA876 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				8CD0ABC32152AA49003DA876 /* Info.plist */,
 				8CD0ABC42152AA49003DA876 /* KonGaRuCapstone.entitlements */,
 				8CD6CA482165E520000162EA /* cat.png */,
+				8C7DB1BB2174A1C100BBBA69 /* catRun.atlas */,
 				8CD6CA442165E4E6000162EA /* catIdle.atlas */,
 				8CD6CA422165E4E5000162EA /* catJump.atlas */,
 				8CD6CA432165E4E5000162EA /* catMove.atlas */,
@@ -208,6 +211,7 @@
 				8CD0ABB72152AA48003DA876 /* GameScene.sks in Resources */,
 				8CD0ABBF2152AA49003DA876 /* Assets.xcassets in Resources */,
 				8CD6CA492165E520000162EA /* cat.png in Resources */,
+				8C7DB1BC2174A1C100BBBA69 /* catRun.atlas in Resources */,
 				8CF864B121633A1B00A0FC7A /* catAttack.atlas in Resources */,
 				8CD0ABB92152AA48003DA876 /* Actions.sks in Resources */,
 				8CD6CA462165E4E6000162EA /* catMove.atlas in Resources */,

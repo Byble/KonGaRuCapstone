@@ -16,9 +16,9 @@ struct PlayerMove {
 
 struct Action {
     var idle = false
-    var jump = false
+//    var jump = false
     var onGround = false
-    var dash = false
+//    var dash = false
     var transform = false
     var attack1 = false
     var attack2 = false
@@ -34,6 +34,7 @@ struct AnimCheck {
     var attacking3 = false
     var transforming = false
     var jumping = false
+    var dash = false
 }
 
 enum State: String {
@@ -43,26 +44,26 @@ enum State: String {
 
 class Player: SKSpriteNode {
     
-    let PlayerT = SKTexture(imageNamed: "cat.png")
-    var bodySize = CGSize()
+    private let PlayerT = SKTexture(imageNamed: "cat.png")
+    private var bodySize = CGSize()
     
-    var animAtlas = SKTextureAtlas()
-    var animArray = [SKTexture]()
+    private var animAtlas = SKTextureAtlas()
+    private var animArray = [SKTexture]()
     
-    var moveMent: PlayerMove
-    var action: Action
-    var animCheck : AnimCheck
+    fileprivate var moveMent: PlayerMove
+    fileprivate var action: Action
+    private var animCheck : AnimCheck
     
-    var moveSpeed = 600
-    let limitMoveSpeed = 600
+    private var moveSpeed = 600
+    private let limitMoveSpeed = 600
     
-    var jumpSpeed = 400
-    let limitJumpSpeed = 400
+    private var jumpSpeed = 400
+    private let limitJumpSpeed = 400
     
-    var dashSpeed = 700
-    var nowState: State
+    private var dashSpeed = 700
+    fileprivate var nowState: State
     
-    let normalize: ((CGFloat) -> CGFloat) = { (input) in
+    private let normalize: ((CGFloat) -> CGFloat) = { (input) in
         return round(input * 1000) / 1000
     }
     
@@ -85,7 +86,7 @@ class Player: SKSpriteNode {
         
         super.init(coder: aDecoder)
     }
-    func setup(){
+    private func setup(){
         self.texture = PlayerT
         
         let collSize = CGSize(width: PlayerT.size().width, height: PlayerT.size().height)
@@ -102,45 +103,37 @@ class Player: SKSpriteNode {
         physicsBody?.contactTestBitMask = ColliderType.enemy.rawValue | ColliderType.floor.rawValue | ColliderType.item.rawValue
         physicsBody?.usesPreciseCollisionDetection = true
     }
-    func checkIdle() -> Bool{
-        if !(moveMent.leftMove) && !(moveMent.rightMove) && (action.onGround) && !(action.dash) && !(action.attack1) && !(action.attack2) && !(action.attack3) && !(action.skill1) && !(action.transform) && !(action.idle){
-            if animCheck.transforming == false{
-                action.idle = true
-                action.attack1 = false
-                action.attack2 = false
-                action.attack3 = false
-                action.dash = false
-                action.onGround = true
-                animCheck.moving = false
-                animCheck.jumping = false
-                animCheck.attacking1 = false
-                animCheck.attacking2 = false
-                animCheck.attacking3 = false
-                
-                if nowState == .cat{
-                    anim(state: "Idle", isRepeat: true, body: .cat, completion: {})
-                }else if nowState == .human{
-                    anim(state: "Idle", isRepeat: true, body: .human, completion: {})
-                }
-                return false
+    private func checkIdle() -> Bool{
+        if !(animCheck.moving) && !(animCheck.jumping) && !(animCheck.attacking1) && !(animCheck.attacking2) && !(animCheck.attacking3) && !(animCheck.dash) && !(animCheck.transforming) && !(action.idle){
+            action.idle = true
+            animCheck.moving = false
+            animCheck.jumping = false
+            animCheck.attacking1 = false
+            animCheck.attacking2 = false
+            animCheck.attacking3 = false
+            
+            if nowState == .cat{
+                anim(state: "Idle", isRepeat: true, body: .cat, completion: {})
+            }else if nowState == .human{
+                anim(state: "Idle", isRepeat: true, body: .human, completion: {})
             }
+            return false
         }
         return true
     }
-
-    func checkTransAnim() -> Bool{
+    private func checkTransAnim() -> Bool{
         if animCheck.transforming == true{
             return false
         }
         return true
     }
-    func checkAtkAnim() -> Bool{
+    private func checkAtkAnim() -> Bool{
         if actionForKeyIsRunning(key: "Attack"){
             return false
         }
         return true
     }
-    func checkMoveAnim(){
+    open func checkMoveAnim(){
         let speedX = normalize((self.physicsBody?.velocity.dx)!)
         let speedY = normalize((self.physicsBody?.velocity.dy)!)
         if (speedX > -0.5 && speedX < 0.5){
@@ -150,7 +143,7 @@ class Player: SKSpriteNode {
             }
         }
     }
-    func jump(){
+    open func jump(){
         if action.onGround == true{
             self.physicsBody?.applyImpulse(CGVector(dx: 0, dy: jumpSpeed))
             action.onGround = false
@@ -165,7 +158,29 @@ class Player: SKSpriteNode {
             }
         }
     }
-    func actionUpdate(){
+    open func dash(){
+        let nowMoveSpeed: CGFloat = abs((self.physicsBody?.velocity.dx)!)
+        if self.xScale > 0{
+            if Int(nowMoveSpeed) < moveSpeed{
+                self.physicsBody?.applyImpulse(CGVector(dx: -dashSpeed, dy: 0))
+            }
+        }else{
+            if Int(nowMoveSpeed) < moveSpeed{
+                self.physicsBody?.applyImpulse(CGVector(dx: dashSpeed, dy: 0))
+            }
+        }
+        guard checkAtkAnim() else{
+            return
+        }
+        if animCheck.transforming == false{
+            if nowState == .cat{
+                anim(state: "Run",isRepeat: false, body: .cat, completion: {})
+            }else if nowState == .human{
+                anim(state: "Run",isRepeat: false, body: .human, completion: {})
+            }
+        }
+    }
+    open func actionUpdate(){
         guard checkTransAnim() else{
             return
         }
@@ -181,30 +196,31 @@ class Player: SKSpriteNode {
                         self.anim(state: "Move", isRepeat: true, body: .cat, completion: {})
                     }
                 }
-                //                    anim(state: "Attack", isRepeat: false, body: .cat) {
-                //                        if self.action.attack2 == true{
-                //                            self.animCheck.attacking2 = true
-                //                            self.anim(state: "Attack", isRepeat: false, body: .cat, completion: {
-                //                                if self.action.attack3 == true{
-                //                                    self.animCheck.attacking3 = true
-                //                                    self.anim(state: "Attack", isRepeat: false, body: .cat, completion: {})
-                //                                }
-                //                            })
-                //                        }
-                //                    }
-            }else if nowState == .human{
+//                anim(state: "Attack", isRepeat: false, body: .cat) {
+//                    if self.action.attack2 == true{
+//                        self.animCheck.attacking2 = true
+//                        self.anim(state: "Attack", isRepeat: false, body: .cat, completion: {
+//                            if self.action.attack3 == true{
+//                                self.animCheck.attacking3 = true
+//                                self.anim(state: "Attack", isRepeat: false, body: .cat, completion: {})
+//                            }
+//                        })
+//                    }
+//                }
+            }
+            else if nowState == .human{
                 anim(state: "Attack", isRepeat: false, body: .human, completion: {})
-                //                    anim(state: "Attack1", isRepeat: false, body: .human) {
-                //                        if self.action.attack2 == true{
-                //                            self.animCheck.attacking2 = true
-                //                            self.anim(state: "Attack2", isRepeat: false, body: .human, completion: {
-                //                                if self.action.attack3 == true{
-                //                                    self.animCheck.attacking3 = true
-                //                                    self.anim(state: "Attack3", isRepeat: false, body: .human, completion: {})
-                //                                }
-                //                            })
-                //                        }
-                //                    }
+//                anim(state: "Attack1", isRepeat: false, body: .human) {
+//                    if self.action.attack2 == true{
+//                        self.animCheck.attacking2 = true
+//                        self.anim(state: "Attack2", isRepeat: false, body: .human, completion: {
+//                            if self.action.attack3 == true{
+//                                self.animCheck.attacking3 = true
+//                                self.anim(state: "Attack3", isRepeat: false, body: .human, completion: {})
+//                            }
+//                        })
+//                    }
+//                }
             }
         }
         if action.transform == true{ //나중에 변경 모션으로 이름 바꾸기 Dead -> ? transform
@@ -235,14 +251,13 @@ class Player: SKSpriteNode {
         }
     }
     
-    func moveUpdate(){
+    open func moveUpdate(){
         guard checkIdle() else {
             return
         }
-        
         let nowMoveSpeed: CGFloat = abs((self.physicsBody?.velocity.dx)!)
-
         if moveMent.leftMove == true{
+            
             if Int(nowMoveSpeed) < limitMoveSpeed{
                 if self.xScale < 0{
                     self.xScale = abs(self.xScale)
@@ -251,7 +266,7 @@ class Player: SKSpriteNode {
                 guard checkAtkAnim() else{
                     return
                 }
-                if !(animCheck.transforming) && !(animCheck.jumping) && !(animCheck.attacking1){
+                if !(animCheck.transforming) && !(animCheck.jumping) && !(animCheck.attacking1) && !(animCheck.dash){
                     if animCheck.moving == false{
                         animCheck.moving = true
                         if nowState == .cat{
@@ -284,31 +299,9 @@ class Player: SKSpriteNode {
                 }
             }
         }
-        if action.dash == true{
-            if self.xScale > 0{
-                if Int(nowMoveSpeed) < moveSpeed{
-                    self.physicsBody?.applyImpulse(CGVector(dx: -dashSpeed, dy: 0))
-                }
-            }else{
-                if Int(nowMoveSpeed) < moveSpeed{
-                    self.physicsBody?.applyImpulse(CGVector(dx: dashSpeed, dy: 0))
-                }
-            }
-            guard checkAtkAnim() else{
-                return
-            }
-            if animCheck.transforming == false{
-                animCheck.moving = true
-                if nowState == .cat{
-                    anim(state: "Move",isRepeat: true, body: .cat, completion: {})
-                }else if nowState == .human{
-                    anim(state: "Move",isRepeat: true, body: .human, completion: {})
-                }
-            }
-            action.dash = false
-        }
+        
     }
-    func anim(state: String, isRepeat: Bool, body: State, completion: @escaping () -> ()){
+    private func anim(state: String, isRepeat: Bool, body: State, completion: @escaping () -> ()){
         animArray.removeAll()
         
         if action.dead == false{
@@ -383,6 +376,14 @@ class Player: SKSpriteNode {
                         self.animCheck.jumping = false
                         completion()
                     }
+                case "Run":
+                    animCheck.moving = false
+                    action.idle = false
+                    animCheck.dash = true
+                    self.run(action: SKAction.animate(with: animArray, timePerFrame: 0.03), withKey: "dash") {
+                        self.animCheck.dash = false
+                        completion()
+                    }
                 default:
                     completion()
                 }
@@ -391,8 +392,7 @@ class Player: SKSpriteNode {
     }
 }
 
-extension SKNode
-{
+extension SKNode{
     func run(action: SKAction!, withKey: String!, completion: @escaping () -> ()) {
         let completionAction = SKAction.run(completion)
         let compositeAction = SKAction.sequence([ action, completionAction ])
@@ -401,5 +401,22 @@ extension SKNode
     
     func actionForKeyIsRunning(key: String) -> Bool {
         return self.action(forKey: key) != nil ? true : false
+    }
+}
+extension Player{
+    func setPlayerMoveLeft(isMoving: Bool){
+        moveMent.leftMove = isMoving
+    }
+    func setPlayerMoveRight(isMoving: Bool){
+        moveMent.rightMove = isMoving
+    }
+    func setActionTrans(isTransforming: Bool){
+        action.transform = isTransforming
+    }
+    func setActionOnGround(isOn: Bool){
+        action.onGround = isOn
+    }
+    func getState() -> State{
+        return self.nowState
     }
 }
