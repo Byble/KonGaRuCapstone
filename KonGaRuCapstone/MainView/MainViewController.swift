@@ -20,8 +20,7 @@ class MainViewController: NSViewController {
     
     override func viewWillAppear() {
         enterFullScreen()
-    }
-    
+    }    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,11 +35,9 @@ class MainViewController: NSViewController {
             view.ignoresSiblingOrder = true
         }
     }
-    
     @IBAction func exitBtn(_ sender: Any) {
         NSApplication.shared.terminate(self)
     }
-    
     
     func enterFullScreen(){
         let presOptions: NSApplication.PresentationOptions = [.fullScreen, .autoHideMenuBar]

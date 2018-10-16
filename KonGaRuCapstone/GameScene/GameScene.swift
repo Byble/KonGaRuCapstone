@@ -28,15 +28,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override init(size: CGSize) {
         player = Player()
-        
         super.init()
         
         setup()
     }
     
     required init?(coder aDecoder: NSCoder) {
-        player = Player()
-        
+        player = Player()        
         super.init(coder: aDecoder)
         
         setup()

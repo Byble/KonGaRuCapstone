@@ -26,7 +26,6 @@ struct Action {
     var skill1 = false
     var dead = false
 }
-
 struct AnimCheck {
     var moving = false
     var attacking1 = false
