@@ -10,31 +10,105 @@
 		8C1C72EB215A5E68007661A3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1C72EA215A5E68007661A3 /* MainView.swift */; };
 		8C23B16121537900002C5F48 /* Ground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C23B16021537900002C5F48 /* Ground.swift */; };
 		8C23B16321537B19002C5F48 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C23B16221537B19002C5F48 /* Player.swift */; };
-		8C7DB1BC2174A1C100BBBA69 /* catRun.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8C7DB1BB2174A1C100BBBA69 /* catRun.atlas */; };
+		8C32DF4821986DE200DBF285 /* cat.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C32DF4721986DE200DBF285 /* cat.png */; };
+		8C32DF5F219874EB00DBF285 /* catIdle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8C32DF59219874EA00DBF285 /* catIdle.atlas */; };
+		8C32DF60219874EB00DBF285 /* catAttack1.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8C32DF5A219874EA00DBF285 /* catAttack1.atlas */; };
+		8C32DF61219874EB00DBF285 /* catRun.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8C32DF5B219874EB00DBF285 /* catRun.atlas */; };
+		8C32DF62219874EB00DBF285 /* catMove.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8C32DF5C219874EB00DBF285 /* catMove.atlas */; };
+		8C32DF63219874EB00DBF285 /* catJump.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8C32DF5D219874EB00DBF285 /* catJump.atlas */; };
+		8C36EC1421C6736800B8A597 /* bg_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C36EC1021C6736800B8A597 /* bg_2.png */; };
+		8C36EC1521C6736800B8A597 /* bg_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C36EC1121C6736800B8A597 /* bg_0.png */; };
+		8C36EC1621C6736800B8A597 /* bg_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C36EC1221C6736800B8A597 /* bg_3.png */; };
+		8C36EC1721C6736800B8A597 /* bg_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C36EC1321C6736800B8A597 /* bg_1.png */; };
+		8C36EC1921C6737800B8A597 /* npc1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C36EC1821C6737800B8A597 /* npc1.png */; };
+		8C36EC1B21C6B53200B8A597 /* NPC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C36EC1A21C6B53200B8A597 /* NPC.swift */; };
+		8C36EC1D21C6C0CB00B8A597 /* PhysicsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C36EC1C21C6C0CB00B8A597 /* PhysicsCategory.swift */; };
+		8C36EC2121C7F1D200B8A597 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C36EC2021C7F1D200B8A597 /* Enemy.swift */; };
+		8C36EC2421C7F4DD00B8A597 /* moleAttack.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8C36EC2221C7F4DD00B8A597 /* moleAttack.atlas */; };
+		8C36EC2521C7F4DD00B8A597 /* moleIdle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8C36EC2321C7F4DD00B8A597 /* moleIdle.atlas */; };
+		8C36EC2821C7F4E200B8A597 /* mudIdle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8C36EC2621C7F4E100B8A597 /* mudIdle.atlas */; };
+		8C36EC2921C7F4E200B8A597 /* mudAttack.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8C36EC2721C7F4E200B8A597 /* mudAttack.atlas */; };
+		8C36EC2C21C7F4E600B8A597 /* snaleIdle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8C36EC2A21C7F4E600B8A597 /* snaleIdle.atlas */; };
+		8C36EC2D21C7F4E600B8A597 /* snaleAttack.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8C36EC2B21C7F4E600B8A597 /* snaleAttack.atlas */; };
+		8C36EC3121C7F52D00B8A597 /* snale.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C36EC2E21C7F52C00B8A597 /* snale.png */; };
+		8C36EC3221C7F52D00B8A597 /* mole.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C36EC2F21C7F52C00B8A597 /* mole.png */; };
+		8C36EC3321C7F52D00B8A597 /* mud.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C36EC3021C7F52C00B8A597 /* mud.png */; };
+		8C36EC3721C8913400B8A597 /* moleMove.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8C36EC3621C8913400B8A597 /* moleMove.atlas */; };
+		8C36EC3921C8E58A00B8A597 /* EnemyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C36EC3821C8E58A00B8A597 /* EnemyType.swift */; };
+		8C36EC4021C8EA5C00B8A597 /* mudMove.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8C36EC3E21C8EA5C00B8A597 /* mudMove.atlas */; };
+		8C36EC4121C8EA5C00B8A597 /* snaleMove.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8C36EC3F21C8EA5C00B8A597 /* snaleMove.atlas */; };
+		8C4FB81B21AE7C2200DA1099 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8C4FB81A21AE7C2200DA1099 /* GameScene.sks */; };
+		8C8375B821B643E400E5A23E /* catAttack1.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8C8375B721B643E400E5A23E /* catAttack1.atlas */; };
+		8C8375BA21B6472F00E5A23E /* catSkillEffect.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C8375B921B6472F00E5A23E /* catSkillEffect.png */; };
+		8C8807C921C5589C0079CC83 /* catSkill.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8C8807C821C5589B0079CC83 /* catSkill.atlas */; };
+		8C8807CB21C55E5A0079CC83 /* catSkillEffect.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8C8807CA21C55E5A0079CC83 /* catSkillEffect.atlas */; };
+		8C8BFD7C21B4E2690026DCF7 /* humanSkill.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8C8BFD7B21B4E2690026DCF7 /* humanSkill.atlas */; };
+		8CC7444821B42DBB0006E12E /* catAttack3.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8CC7444321B42DBA0006E12E /* catAttack3.atlas */; };
+		8CC7444C21B42DBB0006E12E /* catAttack2.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8CC7444721B42DBB0006E12E /* catAttack2.atlas */; };
+		8CC7445021B42EC60006E12E /* humanAim.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CC7444E21B42EC60006E12E /* humanAim.png */; };
 		8CD0ABB52152AA48003DA876 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD0ABB42152AA48003DA876 /* AppDelegate.swift */; };
-		8CD0ABB72152AA48003DA876 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8CD0ABB62152AA48003DA876 /* GameScene.sks */; };
 		8CD0ABB92152AA48003DA876 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8CD0ABB82152AA48003DA876 /* Actions.sks */; };
 		8CD0ABBB2152AA48003DA876 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD0ABBA2152AA48003DA876 /* GameScene.swift */; };
 		8CD0ABBD2152AA48003DA876 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD0ABBC2152AA48003DA876 /* MainViewController.swift */; };
 		8CD0ABBF2152AA49003DA876 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CD0ABBE2152AA49003DA876 /* Assets.xcassets */; };
 		8CD0ABC22152AA49003DA876 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CD0ABC02152AA49003DA876 /* Main.storyboard */; };
 		8CD0ABCB2152AA59003DA876 /* ControllerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD0ABCA2152AA59003DA876 /* ControllerService.swift */; };
-		8CD6CA452165E4E6000162EA /* catJump.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8CD6CA422165E4E5000162EA /* catJump.atlas */; };
-		8CD6CA462165E4E6000162EA /* catMove.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8CD6CA432165E4E5000162EA /* catMove.atlas */; };
-		8CD6CA472165E4E6000162EA /* catIdle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8CD6CA442165E4E6000162EA /* catIdle.atlas */; };
-		8CD6CA492165E520000162EA /* cat.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CD6CA482165E520000162EA /* cat.png */; };
-		8CF864AE21633A1B00A0FC7A /* catDead.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8CF864A621633A1A00A0FC7A /* catDead.atlas */; };
-		8CF864B121633A1B00A0FC7A /* catAttack.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8CF864A921633A1B00A0FC7A /* catAttack.atlas */; };
+		8CD2896E21B24BA9007A053F /* humanRun.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8CD2896D21B24BA9007A053F /* humanRun.atlas */; };
+		8CD2897321B24C3F007A053F /* humanTrans.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8CD2896F21B24C3E007A053F /* humanTrans.atlas */; };
+		8CD2897421B24C3F007A053F /* catTrans.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8CD2897021B24C3E007A053F /* catTrans.atlas */; };
+		8CD2897521B24C3F007A053F /* humanDead.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8CD2897121B24C3E007A053F /* humanDead.atlas */; };
+		8CD2897621B24C3F007A053F /* catDead.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8CD2897221B24C3F007A053F /* catDead.atlas */; };
+		8CE19BB721AD9D6C00B8F915 /* humanIdle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8CE19BB021AD9D6B00B8F915 /* humanIdle.atlas */; };
+		8CE19BB921AD9D6C00B8F915 /* humanAttack2.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8CE19BB221AD9D6C00B8F915 /* humanAttack2.atlas */; };
+		8CE19BBA21AD9D6C00B8F915 /* humanMove.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8CE19BB321AD9D6C00B8F915 /* humanMove.atlas */; };
+		8CE19BBB21AD9D6C00B8F915 /* humanJump.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8CE19BB421AD9D6C00B8F915 /* humanJump.atlas */; };
+		8CE19BBC21AD9D6C00B8F915 /* humanAttack3.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8CE19BB521AD9D6C00B8F915 /* humanAttack3.atlas */; };
+		8CE19BBD21AD9D6C00B8F915 /* humanAttack1.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8CE19BB621AD9D6C00B8F915 /* humanAttack1.atlas */; };
+		8CE19BBF21AD9D9100B8F915 /* human.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CE19BBE21AD9D9100B8F915 /* human.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8C1C72EA215A5E68007661A3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		8C23B16021537900002C5F48 /* Ground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ground.swift; sourceTree = "<group>"; };
 		8C23B16221537B19002C5F48 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		8C7DB1BB2174A1C100BBBA69 /* catRun.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = catRun.atlas; sourceTree = "<group>"; };
+		8C32DF4721986DE200DBF285 /* cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat.png; sourceTree = "<group>"; };
+		8C32DF59219874EA00DBF285 /* catIdle.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = catIdle.atlas; sourceTree = "<group>"; };
+		8C32DF5A219874EA00DBF285 /* catAttack1.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = catAttack1.atlas; sourceTree = "<group>"; };
+		8C32DF5B219874EB00DBF285 /* catRun.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = catRun.atlas; sourceTree = "<group>"; };
+		8C32DF5C219874EB00DBF285 /* catMove.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = catMove.atlas; sourceTree = "<group>"; };
+		8C32DF5D219874EB00DBF285 /* catJump.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = catJump.atlas; sourceTree = "<group>"; };
+		8C36EC1021C6736800B8A597 /* bg_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_2.png; sourceTree = "<group>"; };
+		8C36EC1121C6736800B8A597 /* bg_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_0.png; sourceTree = "<group>"; };
+		8C36EC1221C6736800B8A597 /* bg_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_3.png; sourceTree = "<group>"; };
+		8C36EC1321C6736800B8A597 /* bg_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_1.png; sourceTree = "<group>"; };
+		8C36EC1821C6737800B8A597 /* npc1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = npc1.png; sourceTree = "<group>"; };
+		8C36EC1A21C6B53200B8A597 /* NPC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPC.swift; sourceTree = "<group>"; };
+		8C36EC1C21C6C0CB00B8A597 /* PhysicsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsCategory.swift; sourceTree = "<group>"; };
+		8C36EC2021C7F1D200B8A597 /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
+		8C36EC2221C7F4DD00B8A597 /* moleAttack.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = moleAttack.atlas; sourceTree = "<group>"; };
+		8C36EC2321C7F4DD00B8A597 /* moleIdle.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = moleIdle.atlas; sourceTree = "<group>"; };
+		8C36EC2621C7F4E100B8A597 /* mudIdle.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = mudIdle.atlas; sourceTree = "<group>"; };
+		8C36EC2721C7F4E200B8A597 /* mudAttack.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = mudAttack.atlas; sourceTree = "<group>"; };
+		8C36EC2A21C7F4E600B8A597 /* snaleIdle.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = snaleIdle.atlas; sourceTree = "<group>"; };
+		8C36EC2B21C7F4E600B8A597 /* snaleAttack.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = snaleAttack.atlas; sourceTree = "<group>"; };
+		8C36EC2E21C7F52C00B8A597 /* snale.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snale.png; sourceTree = "<group>"; };
+		8C36EC2F21C7F52C00B8A597 /* mole.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mole.png; sourceTree = "<group>"; };
+		8C36EC3021C7F52C00B8A597 /* mud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mud.png; sourceTree = "<group>"; };
+		8C36EC3621C8913400B8A597 /* moleMove.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = moleMove.atlas; sourceTree = "<group>"; };
+		8C36EC3821C8E58A00B8A597 /* EnemyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyType.swift; sourceTree = "<group>"; };
+		8C36EC3E21C8EA5C00B8A597 /* mudMove.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = mudMove.atlas; sourceTree = "<group>"; };
+		8C36EC3F21C8EA5C00B8A597 /* snaleMove.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = snaleMove.atlas; sourceTree = "<group>"; };
+		8C4FB81A21AE7C2200DA1099 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		8C8375B721B643E400E5A23E /* catAttack1.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = catAttack1.atlas; path = ../../cat_ani/catAttack1.atlas; sourceTree = "<group>"; };
+		8C8375B921B6472F00E5A23E /* catSkillEffect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = catSkillEffect.png; sourceTree = "<group>"; };
+		8C8807C821C5589B0079CC83 /* catSkill.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = catSkill.atlas; sourceTree = "<group>"; };
+		8C8807CA21C55E5A0079CC83 /* catSkillEffect.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = catSkillEffect.atlas; sourceTree = "<group>"; };
+		8C8BFD7B21B4E2690026DCF7 /* humanSkill.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = humanSkill.atlas; sourceTree = "<group>"; };
+		8CC7444321B42DBA0006E12E /* catAttack3.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = catAttack3.atlas; sourceTree = "<group>"; };
+		8CC7444721B42DBB0006E12E /* catAttack2.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = catAttack2.atlas; sourceTree = "<group>"; };
+		8CC7444E21B42EC60006E12E /* humanAim.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = humanAim.png; sourceTree = "<group>"; };
 		8CD0ABB12152AA48003DA876 /* KonGaRuCapstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KonGaRuCapstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CD0ABB42152AA48003DA876 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8CD0ABB62152AA48003DA876 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		8CD0ABB82152AA48003DA876 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		8CD0ABBA2152AA48003DA876 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		8CD0ABBC2152AA48003DA876 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -43,12 +117,18 @@
 		8CD0ABC32152AA49003DA876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CD0ABC42152AA49003DA876 /* KonGaRuCapstone.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KonGaRuCapstone.entitlements; sourceTree = "<group>"; };
 		8CD0ABCA2152AA59003DA876 /* ControllerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerService.swift; sourceTree = "<group>"; };
-		8CD6CA422165E4E5000162EA /* catJump.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = catJump.atlas; sourceTree = "<group>"; };
-		8CD6CA432165E4E5000162EA /* catMove.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = catMove.atlas; sourceTree = "<group>"; };
-		8CD6CA442165E4E6000162EA /* catIdle.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = catIdle.atlas; sourceTree = "<group>"; };
-		8CD6CA482165E520000162EA /* cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat.png; sourceTree = "<group>"; };
-		8CF864A621633A1A00A0FC7A /* catDead.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = catDead.atlas; sourceTree = "<group>"; };
-		8CF864A921633A1B00A0FC7A /* catAttack.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = catAttack.atlas; sourceTree = "<group>"; };
+		8CD2896D21B24BA9007A053F /* humanRun.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = humanRun.atlas; path = ../../human_ani/humanRun.atlas; sourceTree = "<group>"; };
+		8CD2896F21B24C3E007A053F /* humanTrans.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = humanTrans.atlas; sourceTree = "<group>"; };
+		8CD2897021B24C3E007A053F /* catTrans.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = catTrans.atlas; sourceTree = "<group>"; };
+		8CD2897121B24C3E007A053F /* humanDead.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = humanDead.atlas; sourceTree = "<group>"; };
+		8CD2897221B24C3F007A053F /* catDead.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = catDead.atlas; sourceTree = "<group>"; };
+		8CE19BB021AD9D6B00B8F915 /* humanIdle.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = humanIdle.atlas; sourceTree = "<group>"; };
+		8CE19BB221AD9D6C00B8F915 /* humanAttack2.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = humanAttack2.atlas; sourceTree = "<group>"; };
+		8CE19BB321AD9D6C00B8F915 /* humanMove.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = humanMove.atlas; sourceTree = "<group>"; };
+		8CE19BB421AD9D6C00B8F915 /* humanJump.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = humanJump.atlas; sourceTree = "<group>"; };
+		8CE19BB521AD9D6C00B8F915 /* humanAttack3.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = humanAttack3.atlas; sourceTree = "<group>"; };
+		8CE19BB621AD9D6C00B8F915 /* humanAttack1.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = humanAttack1.atlas; sourceTree = "<group>"; };
+		8CE19BBE21AD9D9100B8F915 /* human.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = human.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +147,10 @@
 			children = (
 				8C23B16221537B19002C5F48 /* Player.swift */,
 				8C23B16021537900002C5F48 /* Ground.swift */,
+				8C36EC1A21C6B53200B8A597 /* NPC.swift */,
+				8C36EC1C21C6C0CB00B8A597 /* PhysicsCategory.swift */,
+				8C36EC2021C7F1D200B8A597 /* Enemy.swift */,
+				8C36EC3821C8E58A00B8A597 /* EnemyType.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -100,8 +184,8 @@
 			isa = PBXGroup;
 			children = (
 				8CD0ABBA2152AA48003DA876 /* GameScene.swift */,
-				8CD0ABB62152AA48003DA876 /* GameScene.sks */,
 				8CD0ABB82152AA48003DA876 /* Actions.sks */,
+				8C4FB81A21AE7C2200DA1099 /* GameScene.sks */,
 			);
 			path = GameScene;
 			sourceTree = "<group>";
@@ -125,6 +209,7 @@
 		8CD0ABB32152AA48003DA876 /* KonGaRuCapstone */ = {
 			isa = PBXGroup;
 			children = (
+				8CD491DC21AACCDE00B6E2F0 /* BG */,
 				8C1C72F0215A5F3C007661A3 /* GameScene */,
 				8C1C72EF215A5F1A007661A3 /* Storyboard */,
 				8C1C72EE215A5F0A007661A3 /* ControllerService */,
@@ -134,15 +219,58 @@
 				8CD0ABBE2152AA49003DA876 /* Assets.xcassets */,
 				8CD0ABC32152AA49003DA876 /* Info.plist */,
 				8CD0ABC42152AA49003DA876 /* KonGaRuCapstone.entitlements */,
-				8CD6CA482165E520000162EA /* cat.png */,
-				8C7DB1BB2174A1C100BBBA69 /* catRun.atlas */,
-				8CD6CA442165E4E6000162EA /* catIdle.atlas */,
-				8CD6CA422165E4E5000162EA /* catJump.atlas */,
-				8CD6CA432165E4E5000162EA /* catMove.atlas */,
-				8CF864A921633A1B00A0FC7A /* catAttack.atlas */,
-				8CF864A621633A1A00A0FC7A /* catDead.atlas */,
+				8C32DF4721986DE200DBF285 /* cat.png */,
+				8CE19BBE21AD9D9100B8F915 /* human.png */,
+				8C8375B921B6472F00E5A23E /* catSkillEffect.png */,
+				8CC7444E21B42EC60006E12E /* humanAim.png */,
+				8C36EC2F21C7F52C00B8A597 /* mole.png */,
+				8C36EC3021C7F52C00B8A597 /* mud.png */,
+				8C36EC2E21C7F52C00B8A597 /* snale.png */,
+				8C36EC3E21C8EA5C00B8A597 /* mudMove.atlas */,
+				8C36EC3F21C8EA5C00B8A597 /* snaleMove.atlas */,
+				8C36EC3621C8913400B8A597 /* moleMove.atlas */,
+				8C36EC2B21C7F4E600B8A597 /* snaleAttack.atlas */,
+				8C36EC2A21C7F4E600B8A597 /* snaleIdle.atlas */,
+				8C36EC2721C7F4E200B8A597 /* mudAttack.atlas */,
+				8C36EC2621C7F4E100B8A597 /* mudIdle.atlas */,
+				8C36EC2221C7F4DD00B8A597 /* moleAttack.atlas */,
+				8C36EC2321C7F4DD00B8A597 /* moleIdle.atlas */,
+				8C8807CA21C55E5A0079CC83 /* catSkillEffect.atlas */,
+				8C8807C821C5589B0079CC83 /* catSkill.atlas */,
+				8C8375B721B643E400E5A23E /* catAttack1.atlas */,
+				8C8BFD7B21B4E2690026DCF7 /* humanSkill.atlas */,
+				8CC7444721B42DBB0006E12E /* catAttack2.atlas */,
+				8CC7444321B42DBA0006E12E /* catAttack3.atlas */,
+				8CD2897221B24C3F007A053F /* catDead.atlas */,
+				8CD2897021B24C3E007A053F /* catTrans.atlas */,
+				8CD2897121B24C3E007A053F /* humanDead.atlas */,
+				8CD2896F21B24C3E007A053F /* humanTrans.atlas */,
+				8CD2896D21B24BA9007A053F /* humanRun.atlas */,
+				8CE19BB621AD9D6C00B8F915 /* humanAttack1.atlas */,
+				8CE19BB221AD9D6C00B8F915 /* humanAttack2.atlas */,
+				8CE19BB521AD9D6C00B8F915 /* humanAttack3.atlas */,
+				8CE19BB021AD9D6B00B8F915 /* humanIdle.atlas */,
+				8CE19BB421AD9D6C00B8F915 /* humanJump.atlas */,
+				8CE19BB321AD9D6C00B8F915 /* humanMove.atlas */,
+				8C32DF5A219874EA00DBF285 /* catAttack1.atlas */,
+				8C32DF59219874EA00DBF285 /* catIdle.atlas */,
+				8C32DF5D219874EB00DBF285 /* catJump.atlas */,
+				8C32DF5C219874EB00DBF285 /* catMove.atlas */,
+				8C32DF5B219874EB00DBF285 /* catRun.atlas */,
 			);
 			path = KonGaRuCapstone;
+			sourceTree = "<group>";
+		};
+		8CD491DC21AACCDE00B6E2F0 /* BG */ = {
+			isa = PBXGroup;
+			children = (
+				8C36EC1821C6737800B8A597 /* npc1.png */,
+				8C36EC1121C6736800B8A597 /* bg_0.png */,
+				8C36EC1321C6736800B8A597 /* bg_1.png */,
+				8C36EC1021C6736800B8A597 /* bg_2.png */,
+				8C36EC1221C6736800B8A597 /* bg_3.png */,
+			);
+			path = BG;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,17 +336,53 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CD0ABB72152AA48003DA876 /* GameScene.sks in Resources */,
+				8C36EC1721C6736800B8A597 /* bg_1.png in Resources */,
+				8CE19BBF21AD9D9100B8F915 /* human.png in Resources */,
+				8CD2897421B24C3F007A053F /* catTrans.atlas in Resources */,
+				8CE19BBA21AD9D6C00B8F915 /* humanMove.atlas in Resources */,
+				8C8807C921C5589C0079CC83 /* catSkill.atlas in Resources */,
+				8C36EC3221C7F52D00B8A597 /* mole.png in Resources */,
+				8C36EC3721C8913400B8A597 /* moleMove.atlas in Resources */,
+				8CE19BBB21AD9D6C00B8F915 /* humanJump.atlas in Resources */,
+				8C36EC1921C6737800B8A597 /* npc1.png in Resources */,
+				8C36EC4121C8EA5C00B8A597 /* snaleMove.atlas in Resources */,
+				8C36EC3121C7F52D00B8A597 /* snale.png in Resources */,
+				8C4FB81B21AE7C2200DA1099 /* GameScene.sks in Resources */,
 				8CD0ABBF2152AA49003DA876 /* Assets.xcassets in Resources */,
-				8CD6CA492165E520000162EA /* cat.png in Resources */,
-				8C7DB1BC2174A1C100BBBA69 /* catRun.atlas in Resources */,
-				8CF864B121633A1B00A0FC7A /* catAttack.atlas in Resources */,
+				8C32DF4821986DE200DBF285 /* cat.png in Resources */,
+				8C36EC2921C7F4E200B8A597 /* mudAttack.atlas in Resources */,
+				8C32DF61219874EB00DBF285 /* catRun.atlas in Resources */,
+				8CC7444C21B42DBB0006E12E /* catAttack2.atlas in Resources */,
+				8C8BFD7C21B4E2690026DCF7 /* humanSkill.atlas in Resources */,
 				8CD0ABB92152AA48003DA876 /* Actions.sks in Resources */,
-				8CD6CA462165E4E6000162EA /* catMove.atlas in Resources */,
-				8CF864AE21633A1B00A0FC7A /* catDead.atlas in Resources */,
-				8CD6CA452165E4E6000162EA /* catJump.atlas in Resources */,
+				8C36EC2821C7F4E200B8A597 /* mudIdle.atlas in Resources */,
+				8C32DF62219874EB00DBF285 /* catMove.atlas in Resources */,
+				8C36EC1421C6736800B8A597 /* bg_2.png in Resources */,
+				8C36EC3321C7F52D00B8A597 /* mud.png in Resources */,
+				8CC7445021B42EC60006E12E /* humanAim.png in Resources */,
+				8C32DF60219874EB00DBF285 /* catAttack1.atlas in Resources */,
+				8C32DF63219874EB00DBF285 /* catJump.atlas in Resources */,
+				8CE19BBD21AD9D6C00B8F915 /* humanAttack1.atlas in Resources */,
+				8C36EC2421C7F4DD00B8A597 /* moleAttack.atlas in Resources */,
+				8C36EC4021C8EA5C00B8A597 /* mudMove.atlas in Resources */,
+				8CD2897321B24C3F007A053F /* humanTrans.atlas in Resources */,
+				8C36EC1521C6736800B8A597 /* bg_0.png in Resources */,
+				8C8375B821B643E400E5A23E /* catAttack1.atlas in Resources */,
+				8CE19BBC21AD9D6C00B8F915 /* humanAttack3.atlas in Resources */,
+				8CD2897521B24C3F007A053F /* humanDead.atlas in Resources */,
+				8CE19BB921AD9D6C00B8F915 /* humanAttack2.atlas in Resources */,
+				8CD2897621B24C3F007A053F /* catDead.atlas in Resources */,
+				8CD2896E21B24BA9007A053F /* humanRun.atlas in Resources */,
+				8C8375BA21B6472F00E5A23E /* catSkillEffect.png in Resources */,
+				8C32DF5F219874EB00DBF285 /* catIdle.atlas in Resources */,
 				8CD0ABC22152AA49003DA876 /* Main.storyboard in Resources */,
-				8CD6CA472165E4E6000162EA /* catIdle.atlas in Resources */,
+				8C36EC2D21C7F4E600B8A597 /* snaleAttack.atlas in Resources */,
+				8CC7444821B42DBB0006E12E /* catAttack3.atlas in Resources */,
+				8C36EC2C21C7F4E600B8A597 /* snaleIdle.atlas in Resources */,
+				8C36EC2521C7F4DD00B8A597 /* moleIdle.atlas in Resources */,
+				8C8807CB21C55E5A0079CC83 /* catSkillEffect.atlas in Resources */,
+				8CE19BB721AD9D6C00B8F915 /* humanIdle.atlas in Resources */,
+				8C36EC1621C6736800B8A597 /* bg_3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,11 +393,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C36EC3921C8E58A00B8A597 /* EnemyType.swift in Sources */,
 				8CD0ABBD2152AA48003DA876 /* MainViewController.swift in Sources */,
 				8C1C72EB215A5E68007661A3 /* MainView.swift in Sources */,
 				8CD0ABBB2152AA48003DA876 /* GameScene.swift in Sources */,
+				8C36EC2121C7F1D200B8A597 /* Enemy.swift in Sources */,
+				8C36EC1D21C6C0CB00B8A597 /* PhysicsCategory.swift in Sources */,
 				8CD0ABB52152AA48003DA876 /* AppDelegate.swift in Sources */,
 				8CD0ABCB2152AA59003DA876 /* ControllerService.swift in Sources */,
+				8C36EC1B21C6B53200B8A597 /* NPC.swift in Sources */,
 				8C23B16321537B19002C5F48 /* Player.swift in Sources */,
 				8C23B16121537900002C5F48 /* Ground.swift in Sources */,
 			);

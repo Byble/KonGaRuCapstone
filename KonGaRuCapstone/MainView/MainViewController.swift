@@ -19,17 +19,18 @@ class MainViewController: NSViewController {
     let controllService = ControllerService()
     
     override func viewWillAppear() {
-        enterFullScreen()
-    }    
+//        enterFullScreen()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
         controllService.delegate = self
         
         if let view = self.skView {
+//            view.showsPhysics = true
             if let scene = SKScene(fileNamed: "GameScene") {
                 scene.scaleMode = .aspectFill
-                
+
                 view.presentScene(scene)
             }            
             view.ignoresSiblingOrder = true
@@ -50,12 +51,15 @@ class MainViewController: NSViewController {
 extension MainViewController : ControllerServiceDelegate {
     func connectedDevicesChanged(manager: ControllerService, connectedDevices: [String]) {
         OperationQueue.main.addOperation {
-            self.connectionLabel.stringValue = "연결됨";
+//            self.connectionLabel.stringValue = "연결됨";
         }
     }    
     func buttonChanged(manager: ControllerService, changedBtn: String) {
         if let game = skView.scene as? GameScene{
             OperationQueue.main.addOperation {
+                guard game.player.action.skill1 == false else{
+                    return
+                }
                 switch changedBtn {
                 case "L":
                     game.player.setPlayerMoveLeft(isMoving: true)
@@ -66,17 +70,20 @@ extension MainViewController : ControllerServiceDelegate {
                 case "RUp":
                     game.player.setPlayerMoveRight(isMoving: false)
                 case "Jp":
-                    game.player.jump()
-//                case "A1":
-//                    self.action(act: "A1")
-//                case "A2":
-//                    self.action(act: "A2")
-//                case "A3":
-//                    self.action(act: "A3")
+                    game.player.Jump()
+                case "A1":
+                    game.player.Attack1()
+                    game.player.action.attack1 = true
+                case "A2":
+                    game.player.action.attack2 = true
+                case "A3":
+                    game.player.action.attack3 = true
+                case "S":
+                    game.player.Skill()
                 case "D":
-                    game.player.dash()
+                    game.player.Dash()
                 case "T":
-                    game.player.setActionTrans(isTransforming: true)
+                    game.player.Transform()
                 default:
                     NSLog("%@", "Unknown value received")
                 }
