@@ -38,7 +38,7 @@ class NPC: SKSpriteNode {
     private func SetupNpc(){
         self.texture = npcT
         self.size = npcT.size()
-        self.position = CGPoint(x: 2567, y: -394.847)
+        self.position = CGPoint(x: 2567, y: -445)
         self.zPosition = 0
         let collSize = CGSize(width: npcT.size().width*2, height: npcT.size().height)
         physicsBody = SKPhysicsBody(rectangleOf: collSize, center: CGPoint(x: 0, y: self.centerRect.height))

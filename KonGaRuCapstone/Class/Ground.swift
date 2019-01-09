@@ -10,21 +10,22 @@ import Cocoa
 import SpriteKit
 
 class Ground: SKSpriteNode {
-    init() {
-        let groundSize = CGSize(width: 40, height: 40)
-        
-        super.init(texture: nil, color: NSColor.yellow, size: groundSize)
-        
-        setup()
-    }
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        DispatchQueue.main.asyncAfter(deadline: .now()+1) {
+            self.setup()
+        }
     }
     
-    
     func setup(){
-        physicsBody = SKPhysicsBody(rectangleOf: size)
-        physicsBody!.isDynamic = false
+        self.color = NSColor.clear
+        physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: self.size.width, height: self.size.height))
+        physicsBody?.categoryBitMask = PhysicsCategory.Ground
+        physicsBody?.collisionBitMask = PhysicsCategory.Player | PhysicsCategory.Enemy
+        physicsBody?.contactTestBitMask = PhysicsCategory.Player
+        physicsBody?.restitution = 0.0
+        physicsBody?.friction = 1
+        physicsBody?.isDynamic = false
     }
 }

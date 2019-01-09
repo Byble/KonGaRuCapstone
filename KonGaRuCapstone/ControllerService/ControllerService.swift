@@ -38,11 +38,21 @@ class ControllerService: NSObject {
         self.serviceAdvertiser.stopAdvertisingPeer()
         self.serviceBrowser.stopBrowsingForPeers()
     }
+    func send(buttonName : String){
+        if session.connectedPeers.count > 0{
+            do {
+                try self.session.send(buttonName.data(using: .utf8)!, toPeers: session.connectedPeers, with: .reliable)
+            }
+            catch let error {
+                NSLog("%@", "Error for sending: \(error)")
+            }
+        }
+    }
 }
 
 extension ControllerService: MCNearbyServiceBrowserDelegate{
     func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?) {
-        browser.invitePeer(peerID, to: session, withContext: nil, timeout: 10)
+        browser.invitePeer(peerID, to: session, withContext: nil, timeout: 5)
     }
     
     func browser(_ browser: MCNearbyServiceBrowser, lostPeer peerID: MCPeerID) {
@@ -62,7 +72,18 @@ extension ControllerService: MCNearbyServiceAdvertiserDelegate{
 
 extension ControllerService: MCSessionDelegate{
     func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
-        self.delegate?.connectedDevicesChanged(manager: self, connectedDevices: session.connectedPeers.map{$0.displayName})
+        switch state {
+        case .connecting:
+            self.delegate?.connectedDevicesChanged(manager: self, connectedDevices: ["연결중..."])
+        case .connected:
+            self.delegate?.connectedDevicesChanged(manager: self, connectedDevices: session.connectedPeers.map{$0.displayName})
+            self.serviceAdvertiser.stopAdvertisingPeer()
+            self.serviceBrowser.stopBrowsingForPeers()
+        case .notConnected:
+            self.delegate?.connectedDevicesChanged(manager: self, connectedDevices: ["다시 연결해주세요..."])
+            self.serviceAdvertiser.startAdvertisingPeer()
+            self.serviceBrowser.startBrowsingForPeers()
+        }
     }
     
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
