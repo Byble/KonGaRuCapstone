@@ -8,6 +8,8 @@ Well the reason i made it was there was few games code by swift... so just we ma
 
 Characters, monsters, maps are designed by my friends, so please do not copy it another project :)
 
+This game is working with Controller in my git
+so plz download that too and connect with BLUETOOTH or WIFI
 
 If any questions plz contact :)
 
