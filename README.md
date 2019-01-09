@@ -12,6 +12,7 @@ This game is working with Controller in my git
 so plz download that too and connect with BLUETOOTH or WIFI
 
 If any questions plz contact :)
+Address: alsrnr315@gmail.com
 
 I'm Programmer for 8 Years (maybe)
 and interested in AI, Applications, Games and many other programs
